@@ -31,7 +31,7 @@ function programarNotificaciones(plantas) {
 
 // Notificación push (cuando el servidor la envía)
 self.addEventListener('push', e => {
-  const data = e.data ? e.data.json() : { titulo: '🌿 Mis Plantas', cuerpo: 'Hay plantas que necesitan agua hoy' };
+  const data = e.data ? e.data.json() : { titulo: '🌿 Estuqueras Garden', cuerpo: 'Hay plantas que necesitan agua hoy' };
   e.waitUntil(
     self.registration.showNotification(data.titulo, {
       body: data.cuerpo,
